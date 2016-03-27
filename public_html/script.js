@@ -106,11 +106,11 @@ function fetchData() {
 
 	var urls = ['data/aircraft.json', 'http://http://fdcqbuhveewjdn4p.myfritz.net/aircraft.json'];
 
-for (var i in urls) {
+for (var theUrl in urls) {
 
 
 
-	FetchPending = $.ajax({ url: i,
+	FetchPending = $.ajax({ url: theUrl,
                                 timeout: 5000,
                                 cache: false,
                                 dataType: 'json' });
