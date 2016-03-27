@@ -104,7 +104,13 @@ function fetchData() {
                 return;
         }
 
-	FetchPending = $.ajax({ url: 'data/aircraft.json',
+	var urls = ['data/aircraft.json', 'http://http://fdcqbuhveewjdn4p.myfritz.net/aircraft.json'];
+
+for (var i in urls) {
+
+
+
+	FetchPending = $.ajax({ url: i,
                                 timeout: 5000,
                                 cache: false,
                                 dataType: 'json' });
@@ -145,6 +151,7 @@ function fetchData() {
                 $("#update_error_detail").text("AJAX call failed (" + status + (error ? (": " + error) : "") + "). Maybe dump1090 is no longer running?");
                 $("#update_error").css('display','block');
         });
+        }
 }
 
 var PositionHistorySize = 0;
