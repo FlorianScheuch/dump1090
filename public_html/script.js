@@ -104,7 +104,7 @@ function fetchData() {
                 return;
         }
 
-	var urls = ['data/aircraft.json', 'http://http://fdcqbuhveewjdn4p.myfritz.net/aircraft.json'];
+	var urls = ['data/aircraft.json', 'http://fdcqbuhveewjdn4p.myfritz.net/aircraft.json'];
 
 for (var theUrl in urls) {
 
